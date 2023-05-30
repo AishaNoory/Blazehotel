@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BlazeHotelSystem.master.cs" Inherits="BlazeHotelSystem.BlazeHotelSystem" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="BlazeHotelSystem.css" rel="stylesheet" />
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div >
+        <div class="navopacity">
+            <nav class="navi">
+                <div class="logo-container">
+                    <h2>Blaze</h2>
+                </div>
+                <ul class="navlink">
+                    <li> <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="#" ForeColor="Black">Home</asp:HyperLink> </li>
+                    <li> <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="#about" ForeColor="Black">About</asp:HyperLink> </li>
+                    <li> <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="#contact" ForeColor="Black">Contact</asp:HyperLink> </li>
+               </ul>
+
+            </nav>
+        </div>
+
+            <div id="Article">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+   <div id="Footer">
+        <h4 >Blaze Hotel</h4>
+       <span>email@something.com</span>
+       <span style="text-align:center">Copyright 2023</span>
+
+     </div>
+    </div>
+
+        <i class="fas fa-facebook"></i>
+        <i class="fas fa-instagram"></i>
+        <i class="fas fa-telegram"></i>
+        <i class="fas fa-tumblr"></i>
+        <i class="fas fa-github"></i>
+
+   </form>
+</body>
+</html>
+<style>
+
+    body {
+    background-color: #C1D0B5;
+    left:0;
+    right:0;
+    }
+
+    * {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    }
+    .navopacity {
+    background-color: rgb(161, 179, 179);
+    }
+
+    .navi {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: lightgray;
+    width: 100%;
+    opacity: 1;
+    height:60px;
+    top:0;
+    }
+    h2{
+        margin-left:10px;
+    }
+
+
+
+    .navlink {
+    display: flex;
+    padding-top:15px;
+    flex: 2;
+    gap: 2rem;
+    align-items: center;
+    margin-left:100px;
+    }
+
+    .navlink li {
+        text-decoration: none;
+        color: var(--color-dark-variant);
+        font-size: var(--p-font);
+        position: relative;
+        cursor: pointer;
+    }
+
+    ul{
+        display:flex;
+        justify-content:center;
+    }
+    li{
+        margin-left:20px;
+        font-size:20px;
+     
+    }
+    li:hover{
+        text-decoration:underline;
+        transition:ease-in-out .3s;
+    }
+    #Footer{
+        background-color: lightgray;
+        text-align:center;
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        font-size:18px;
+        margin-top:30px;
+    }
+    #Footer li{
+        color:red;
+        text-align:center;
+    }
+    .label{
+        font-size:14px;
+        color:black;
+    }
+
+</style>
